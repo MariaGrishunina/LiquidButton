@@ -1,0 +1,43 @@
+a {
+    text-decoration: none;
+    padding: 15px 40px;
+    border: 1px solid black;
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 1.2em;
+    cursor: none;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+a::before {
+    content: '';
+    position: absolute;
+    top: -190px;
+    left: -25px;
+    width: 200px;
+    height: 200px;
+    background: #8000ff;
+    border-radius: 40%;
+    z-index: -1;
+    animation: effect 6s linear infinite;
+    transition: .5s;
+    transform: scale(1.2);
+}
+
+@keyframes effect {
+    0%{
+        transform: scale(1.2)rotate(0deg);
+    }
+    100% {
+        transform: scale(1.2)rotate(360deg);
+    }
+}
+
+a:hover:before {
+    top: -230px;
+}
+
+a:hover {
+    color: #000;
+}
